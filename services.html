@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salon Website</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Add your custom CSS styles here */
+    .service-icon {
+      font-size: 3em;
+      margin: 20px auto;
+      text-align: center;
+      display: block;
+      color: #333;
+      text-decoration: none;
+    }
+    .service-message {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Welcome to Our Salon</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <a href="#" class="service-icon" data-service="hair"><i class="fas fa-cut"></i></a>
+    </div>
+    <div class="col-md-4">
+      <a href="#" class="service-icon" data-service="beauty"><i class="fas fa-spa"></i></a>
+    </div>
+    <div class="col-md-4">
+      <a href="#" class="service-icon" data-service="nail"><i class="fas fa-hand-sparkles"></i></a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="service-message" class="service-message"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $(".service-icon").click(function(){
+      var service = $(this).data("service");
+      var message = "";
+      
+      switch(service) {
+        case "hair":
+          message = "We offer a variety of hair services including cuts, styling, coloring, and treatments.";
+          break;
+        case "beauty":
+          message = "Pamper yourself with our beauty services including facials, massages, and makeup application.";
+          break;
+        case "nail":
+          message = "Indulge in our nail art services for stunning and trendy nail designs.";
+          break;
+        default:
+          message = "Welcome to our salon!";
+      }
+      
+      $("#service-message").text(message).slideDown();
+      return false; // Prevent default link behavior
+    });
+  });
+</script>
+
+</body>
+</html>

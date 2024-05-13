@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik:wght@300,400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - flaticon
+  -->
+  <link rel="stylesheet" href="assets/css/flaticon.min.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
+    <title>Web Design Mastery | Responsive Portfolio</title>
+  </head>
+  <body id="top" >
+    <!-- 
+    - #HEADER
+  -->
+
+  <script>window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('navbar');
+    var scrollPosition = window.scrollY;
+  
+    // Change background color when scrolling past certain threshold
+    if (scrollPosition > 100) { // Adjust this value to change when the color changes
+      navbar.style.backgroundColor = '#ffd300;'; // Change to the desired background color
+    } else {
+      navbar.style.backgroundColor = ''; // Revert to default background color when not scrolling
+    }
+  });
+  </script>
+    
+   
+        <nav id="navbar">
+          <div class="nav__content">
+            <div class="logo" ><a href="#">In Looks Unisex Saloon</a></div>
+            <label for="check" class="checkbox">
+              <i class="ri-menu-line"></i>
+            </label>
+            <input type="checkbox" name="check" id="check" />
+            <ul class="ul">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="appointment.html">Book Appoinment</a></li>
+              <li><a href="offers.html">Offers</a></li>
+              <li><a href="pricing.html">Services</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+ 
+ <!-- 
+        - #GALLERY
+      -->
+
+      <section class="section gallery" id="gallery" aria-label="photo gallery">
+        <div class="container">
+
+          <div class="title-wrapper">
+
+            <div>
+              <h2 class="h2 section-title" style="font-size: 40px;">Gallery</h2>
+
+              <p class="section-text">
+                Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore dolore magna aliqua
+                suspendisse
+              </p>
+            </div>
+
+           <!---- <a href="#" class="btn has-before">
+              <span class="span">Explore More Gallery</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>-->
+
+          </div>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="gallery-card">
+
+                <figure class="card-banner img-holder" style="--width: 422; --height: 550;">
+                  <img src="./assets/images/gallery-1.jpg" width="422" height="550" loading="lazy" alt="Hair Cutting"
+                    class="img-cover">
+                </figure>
+
+               
+
+              </div>
+            </li>
+
+            <li>
+              <div class="gallery-card">
+
+                <figure class="card-banner img-holder" style="--width: 422; --height: 550;">
+                  <img src="./assets/images/gallery-2.jpg" width="422" height="550" loading="lazy" alt="Hair Cutting"
+                    class="img-cover">
+                </figure>
+
+               
+
+              </div>
+            </li>
+
+            <li>
+              <div class="gallery-card">
+
+                <figure class="card-banner img-holder" style="--width: 422; --height: 550;">
+                  <img src="./assets/images/gallery-3.jpg" width="422" height="550" loading="lazy" alt="Hair Cutting"
+                    class="img-cover">
+                </figure>
+
+              
+
+              </div>
+            </li>
+
+            <li>
+              <div class="gallery-card">
+
+                <figure class="card-banner img-holder" style="--width: 422; --height: 550;">
+                  <img src="./assets/images/gallery-4.jpg" width="422" height="550" loading="lazy" alt="Hair Cutting"
+                    class="img-cover">
+                </figure>
+
+               
+
+              </div>
+            </li>
+          
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+    
+    <footer class="footer" id="contact">
+        <div class="footer__content">
+        <!---- <a href="#"><img src="assets/images/logo.jpg" alt="logo" /></a>-->
+          <div class="footer__socials">
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-pinterest-line"></i></a>
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
+          </div>
+          <p style="color: aliceblue;">Copyright © 2024 Tellas Technologies. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+<!-- 
+    - custom js link
+
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

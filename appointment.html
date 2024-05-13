@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..."/>
+</head>
+<body>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2 class="text-center mb-4">Book Appointment</h2>
+            <form id="appointmentForm">
+                <div class="mb-3">
+                    <label for="inputEmail" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter your email">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputMobile" class="form-label">Mobile Number</label>
+                    <input type="tel" class="form-control" id="inputMobile" placeholder="Enter your mobile number">
+                </div>
+                <div class="mb-3">
+                    <label for="inputDate" class="form-label">Appointment Date</label>
+                    <input type="date" class="form-control" id="inputDate">
+                </div>
+                <div class="mb-3">
+                    <label for="inputTime" class="form-label">Appointment Time</label>
+                    <input type="time" class="form-control" id="inputTime">
+                </div>
+                <div class="mb-3">
+                    <label for="inputPlan" class="form-label">Select Plan</label>
+                    <select class="form-select" id="inputPlan">
+                        <option value="basic">Basic</option>
+                        <option value="standard">Standard</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-..."></script>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function() {
+        // Form submission
+        $('#appointmentForm').submit(function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Get the form data
+            var formData = {
+                email: $('#inputEmail').val(),
+                mobile: $('#inputMobile').val(),
+                date: $('#inputDate').val(),
+                time: $('#inputTime').val(),
+                plan: $('#inputPlan').val()
+            };
+            // Here, you can perform any additional validation if required before sending the data
+            // For example, check if the email and mobile fields are not empty
+            // Once validated, you can send the data to the server using AJAX
+            // For demonstration purpose, let's just log the form data
+            console.log(formData);
+            // Assuming you want to send this data to the server via AJAX, you can use jQuery AJAX
+            // $.ajax({
+            //     url: 'your-server-url',
+            //     method: 'POST',
+            //     data: formData,
+            //     success: function(response) {
+            //         // Handle the success response
+            //     },
+            //     error: function(error) {
+            //         // Handle the error response
+            //     }
+            // });
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik:wght@300,400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - flaticon
+  -->
+  <link rel="stylesheet" href="assets/css/flaticon.min.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
+    <title>Web Design Mastery | Responsive Portfolio</title>
+  </head>
+  <body id="top">
+    <!-- 
+    - #HEADER
+  -->
+
+  <script>window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('navbar');
+    var scrollPosition = window.scrollY;
+  
+    // Change background color when scrolling past certain threshold
+    if (scrollPosition > 100) { // Adjust this value to change when the color changes
+      navbar.style.backgroundColor = '#ffd300;'; // Change to the desired background color
+    } else {
+      navbar.style.backgroundColor = ''; // Revert to default background color when not scrolling
+    }
+  });
+  </script>
+    
+   
+        <nav id="navbar">
+          <div class="nav__content">
+            <div class="logo"><a href="#">In Looks Unisex Saloon</a></div>
+            <label for="check" class="checkbox">
+              <i class="ri-menu-line"></i>
+            </label>
+            <input type="checkbox" name="check" id="check" />
+            <ul class="ul">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="appointment.html">Book Appoinment</a></li>
+              <li><a href="offers.html">Offers</a></li>
+              <li><a href="pricing.html">Services</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        
+        <script>
+            // JavaScript function to handle button clicks
+          document.addEventListener("DOMContentLoaded", function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            // Function to handle button click
+            function handleButtonClick(event) {
+              // Prevent default behavior
+              event.preventDefault();
+          
+              // Remove 'active' class from all buttons
+              filterButtons.forEach(button => button.classList.remove('active'));
+          
+              // Add 'active' class to the clicked button
+              event.currentTarget.classList.add('active');
+          
+              // Get the filter value from the clicked button
+              const filterValue = event.currentTarget.getAttribute('data-filter-btn');
+          
+              // Show or hide pricing cards based on the filter value
+              const pricingCards = document.querySelectorAll('.grid-list li');
+              pricingCards.forEach(card => {
+                const cardFilter = card.getAttribute('data-filter');
+                if (filterValue === 'all' || filterValue === cardFilter) {
+                  card.style.display = 'block';
+                } else {
+                  card.style.display = 'none';
+                }
+              });
+            }
+          
+            // Add click event listener to each button
+            filterButtons.forEach(button => {
+              button.addEventListener('click', handleButtonClick);
+            });
+          });
+          
+          </script>
+    <!-- 
+            - #PRICING
+          -->
+    
+          <section class="section pricing " id="pricing" aria-label="pricing"
+           >
+            <div class="container">
+    
+              <h2 class="h2 section-title text-center" style="color: black; font-size: 40px;"><br>Awesome Pricing Plan</h2>
+    
+              <p class="section-text text-center" style="color: black;">
+               
+              </p>
+    
+              <div class="pricing-tab-container">
+    
+                <ul class="tab-filter">
+    
+                  <li>
+                    <button class="filter-btn active" data-filter-btn="all">
+                      <div class="btn-icon">
+                        <i class="flaticon-beauty-salon" aria-hidden="true"></i>
+                      </div>
+    
+                      <p class="btn-text">All Pricing</p>
+                    </button>
+                  </li>
+    
+                  <li>
+                    <button class="filter-btn" data-filter-btn="shaving">
+                      <div class="btn-icon">
+                        <i class="flaticon-salon" aria-hidden="true"></i>
+                      </div>
+    
+                      <p class="btn-text">Hair</p>
+                    </button>
+                  </li>
+    
+                  <li>
+                    <button class="filter-btn" data-filter-btn="beauty-spa">
+                      <div class="btn-icon">
+                        <i class="flaticon-relax" aria-hidden="true"></i>
+                      </div>
+    
+                      <p class="btn-text">Beauty & Spa</p>
+                    </button>
+                  </li>
+    
+                <!---    <li>
+                     <button class="filter-btn" data-filter-btn="body-treatments">
+                      <div class="btn-icon">
+                        <i class="flaticon-massage" aria-hidden="true"></i>
+                      </div>
+    
+                 <p class="btn-text">Body Treatments</p>
+                    </button>
+                  </li>
+    
+                  <li>
+                    <button class="filter-btn" data-filter-btn="face-washing">
+                      <div class="btn-icon">
+                        <i class="flaticon-spa" aria-hidden="true"></i>
+                      </div>
+    
+                      <p class="btn-text">Face Washing</p>
+                    </button>
+                  </li>-->
+    <style>
+      btn-icon::after{
+        color: #a855f7;;
+      }
+    </style>
+                  <li>
+                    <button class="filter-btn" data-filter-btn="meditations">
+                      <div class="btn-icon">
+                        <i class="flaticon-hair-dye" aria-hidden="true"></i>
+                      </div>
+    
+                      <p class="btn-text" style="font-size: 15px;">Nail</p>
+                    </button>
+                  </li>
+    
+                 
+                </ul>
+                <br><br><br>
+    
+                <ul class="grid-list">
+    
+                  <li data-filter="shaving">
+                    <div class="pricing-card">
+    
+                      <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                        <img src="./assets/images/pricing-1.jpg" width="90" height="90" alt="Hair Cutting & Fitting"
+                          class="img-cover">
+                      </figure>
+    
+                      <div class="wrapper">
+                        <h3 class="h3 card-title">Hair Cutting & Fitting</h3>
+    
+                        <p class="card-text">Clean & simple 30-40 minutes</p>
+                      </div>
+    
+                      <data class="card-price" value="89">Rs.890</data>
+    
+                    </div>
+                  </li>
+    
+                  <li data-filter="shaving">
+                    <div class="pricing-card">
+    
+                      <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                        <img src="./assets/images/pricing-2.jpg" width="90" height="90" alt="Shaving & Facial"
+                          class="img-cover">
+                      </figure>
+    
+                      <div class="wrapper">
+                        <h3 class="h3 card-title">Shaving & Facial</h3>
+    
+                        <p class="card-text">Clean & simple 30-40 minutes</p>
+                      </div>
+    
+                      <data class="card-price" value="45">Rs.450</data>
+    
+                    </div>
+                  </li>
+                  
+    
+                  <li data-filter="face-washing">
+                    <div class="pricing-card">
+    
+                      <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                        <img src="./assets/images/pricing-3.jpg" width="90" height="90" alt="Hair Color & Wash"
+                          class="img-cover">
+                      </figure>
+    
+                      <div class="wrapper">
+                        <h3 class="h3 card-title">Hair Color & Wash</h3>
+    
+                        <p class="card-text">Clean & simple 30-40 minutes</p>
+                      </div>
+    
+                      <data class="card-price" value="35">Rs.350</data>
+    
+                    </div>
+                  </li>
+    
+                  <li data-filter="body-treatments">
+                    <div class="pricing-card">
+    
+                      <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                        <img src="./assets/images/pricing-4.jpg" width="90" height="90" alt="Body Massage"
+                          class="img-cover">
+                      </figure>
+    
+                      <div class="wrapper">
+                        <h3 class="h3 card-title">Body Massage</h3>
+    
+                        <p class="card-text">Clean & simple 30-40 minutes</p>
+                      </div>
+    
+                      <data class="card-price" value="56">Rs.560</data>
+    
+                    </div>
+                  </li>
+    
+                  <li data-filter="beauty-spa">
+                    <div class="pricing-card">
+    
+                      <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                        <img src="./assets/images/pricing-5.jpg" width="90" height="90" alt="Beauty & Spa"
+                          class="img-cover">
+                      </figure>
+    
+                      <div class="wrapper">
+                        <h3 class="h3 card-title">Beauty & Spa</h3>
+    
+                        <p class="card-text">Clean & simple 30-40 minutes</p>
+                      </div>
+    
+                      <data class="card-price" value="27">Rs.270</data>
+    
+                    </div>
+                  </li>
+    
+                  <li data-filter="face-washing">
+                    <div class="pricing-card">
+    
+                      <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                        <img src="./assets/images/pricing-6.jpg" width="90" height="90" alt="Facial & Face Wash"
+                          class="img-cover">
+                      </figure>
+    
+                      <div class="wrapper">
+                        <h3 class="h3 card-title">Facial & Face Wash</h3>
+    
+                        <p class="card-text">Clean & simple 30-40 minutes</p>
+                      </div>
+    
+                      <data class="card-price" value="63">Rs.630</data>
+    
+                    </div>
+                  </li>
+    
+                  <li data-filter="body-treatments">
+                    <div class="pricing-card">
+    
+                      <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                        <img src="./assets/images/pricing-7.jpg" width="90" height="90" alt="Backbone Massage"
+                          class="img-cover">
+                      </figure>
+    
+                      <div class="wrapper">
+                        <h3 class="h3 card-title">Backbone Massage</h3>
+    
+                        <p class="card-text">Clean & simple 30-40 minutes</p>
+                      </div>
+    
+                      <data class="card-price" value="43">Rs.430</data>
+    
+                    </div>
+                  </li>
+    
+                  <li data-filter="meditations">
+                    <div class="pricing-card">
+    
+                      <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                        <img src="./assets/images/pricing-8.jpg" width="90" height="90" alt="Meditation & Massage"
+                          class="img-cover">
+                      </figure>
+    
+                      <div class="wrapper">
+                        <h3 class="h3 card-title">Meditation & Massage</h3>
+    
+                        <p class="card-text">Clean & simple 30-40 minutes</p>
+                      </div>
+    
+                      <data class="card-price" value="74">Rs.740</data>
+    
+                    </div>
+                  </li>
+    
+                </ul>
+    
+              </div>
+    
+            </div>
+          </section>
+          <footer class="footer" id="contact" style="background-color: #011c2c;" >
+            <div class="footer__content">
+            <!---- <a href="#"><img src="assets/images/logo.jpg" alt="logo" /></a>-->
+              <div class="footer__socials">
+                <a href="#"><i class="ri-facebook-fill"></i></a>
+                <a href="#"><i class="ri-twitter-fill"></i></a>
+                <a href="#"><i class="ri-pinterest-line"></i></a>
+                <a href="#"><i class="ri-linkedin-fill"></i></a>
+              </div>
+              <p style="color: aliceblue;">Copyright © 2024 Tellas Technologies. All rights reserved.</p>
+            </div>
+          </footer>
+        </div>
+    <!-- 
+        - custom js link
+    
+      -->
+      <script src="./assets/js/script.js" defer></script>
+    
+      <!-- 
+        - ionicon link
+      -->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      </body>
+    </html>
