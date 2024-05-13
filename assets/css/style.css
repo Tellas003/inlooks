@@ -462,6 +462,7 @@ address { font-style: normal; }
 
 .pricing::before {
   inset: 0;
+  background-image: url(/image/image5.jpg);
   background-color: rgb(167, 167, 161);
   mix-blend-mode: multiply;
   z-index: -1;
